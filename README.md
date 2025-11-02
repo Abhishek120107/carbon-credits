@@ -1,5 +1,5 @@
 # Carbon Credits — Mini Hackathon
-## intro
+## Intro
 ## What this repo contains
 - Short explainers (beginner → technical)
 - Code: credit calculator, registry browser demo, visualisation notebook
