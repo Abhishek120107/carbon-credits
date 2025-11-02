@@ -1,6 +1,7 @@
 # Carbon Credits — Mini Hackathon
 
-#Problem statement
+#**Problem statement**
+
 The current carbon credit system is centralised, opaque, and inefficient, making it 
 difficult for industries and governments to verify, trade, and track genuine carbon credits. 
 This leads to fraud, double-counting, and low trust in the sustainability market.
@@ -12,7 +13,7 @@ This leads to fraud, double-counting, and low trust in the sustainability market
 
 ## 1) What is a carbon credit? (simple)
 A **carbon credit** is a tradable certificate that represents **one metric tonne of CO₂ equivalent (1 tCO₂e)** that has been reduced, avoided, or permanently removed from the atmosphere. Projects that create credits (for example, a forest protection project or a methane capture system) are verified by recognised standards and then issued credits which can be sold. 
-When a credit is used to compensate for emissions it is **retired** so it cannot be sold again.
+When a credit is used to compensate for emissions, it is **retired** so it cannot be sold again.
 For example:
 - Planting trees → earns credits (removes CO₂)
 - Burning fossil fuels → spends credits (adds CO₂)
