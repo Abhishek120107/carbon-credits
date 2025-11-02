@@ -31,13 +31,10 @@ For example:
 
 
 ## 5) Brief overview of Roadmap
-'''Frontend (React.js) 
-     ↓
-Backend API (Node.js / Flask)
-     ↓
-Stellar Blockchain (Soroban Smart Contracts)
-     ↓
-IPFS (for certificate storage)'''
+Frontend (React.js)  →
+Backend API (Node.js / Flask) →
+Stellar Blockchain (Soroban Smart Contracts)→
+IPFS (for certificate storage).
 
 ---
 
