@@ -1,12 +1,16 @@
 # Carbon Credits — Mini Hackathon
-## Intro 
+## intro
 ## What this repo contains
 - Short explainers (beginner → technical)
 - Code: credit calculator, registry browser demo, visualisation notebook
 
 
 ## 1) What is a carbon credit? (simple)
-A **carbon credit** is a tradable certificate that represents **one metric tonne of CO₂ equivalent (1 tCO₂e)** that has been reduced, avoided, or permanently removed from the atmosphere. Projects that create credits (for example, a forest protection project or a methane capture system) are verified by recognised standards and then issued credits which can be sold. When a credit is used to compensate for emissions it is **retired** so it cannot be sold again.
+A **carbon credit** is a tradable certificate that represents **one metric tonne of CO₂ equivalent (1 tCO₂e)** that has been reduced, avoided, or permanently removed from the atmosphere. Projects that create credits (for example, a forest protection project or a methane capture system) are verified by recognised standards and then issued credits which can be sold. 
+When a credit is used to compensate for emissions it is **retired** so it cannot be sold again.
+For example:
+- Planting trees → earns credits (removes CO₂)
+- Burning fossil fuels → spends credits (adds CO₂)
 ## 2) Why carbon credits are used (short)
 - **Channel finance:** They direct private money to projects (renewables, reforestation, methane capture) that cut or remove greenhouse gases.
 - **Corporate emissions strategy:** Companies use credits to compensate for emissions they cannot yet eliminate while reducing their operational emissions first.  
@@ -23,45 +27,20 @@ A **carbon credit** is a tradable certificate that represents **one metric tonne
 
 
 ## 4) Caveats & the market today (short)
-The voluntary carbon market has real value but also real problems: some credits have been found to fail modern integrity tests, and reforms are underway to improve quality and trust. Always prefer credits with clear verification, recent monitoring data, and co-benefits.
+-The voluntary carbon market has real value but also real problems: some credits have been found to fail modern integrity tests, and reforms are underway to improve quality and trust. Always prefer credits with clear verification, recent monitoring data, and co-benefits.
+
+
+## 5) Brief overview of Roadmap
+-Frontend (React.js) 
+     ↓
+-Backend API (Node.js / Flask)
+     ↓
+-Stellar Blockchain (Soroban Smart Contracts)
+     ↓
+-IPFS (for certificate storage)
 
 ---
 
-##Simple code using Python
-python ...
-
-
-"""
-Simple calculator: how many carbon credits to buy to offset X tonnes of CO2e.
-
-Usage:
-    python calc_credits.py 8.8
-"""
-
-import sys
-
-import math
-
-
-
-def credits_needed(emissions_tco2):
-
-    # 1 carbon credit = 1 tCO2e (standard unit)
-    
-    return math.ceil(emissions_tco2)
-
-
-if __name__ == "__main__":
-
-    if len(sys.argv) < 2:
-    
-        print("Usage: python calc_credits.py <emissions in tCO2e>")
-        
-        sys.exit(1)
-        
-    emissions = float(sys.argv[1])
-    print(f"Emissions: {emissions:.2f} tCO2e")
-    print(f"Credits needed (1 credit = 1 tCO2e): {credits_needed(emissions)}")
 
 ## Simple code in Rust
 // src/main.rs
