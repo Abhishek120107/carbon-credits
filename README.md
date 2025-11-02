@@ -30,7 +30,7 @@ The voluntary carbon market has real value but also real problems: some credits 
 ##Simple code using Python
 python ...
 
-#!/usr/bin/env python3
+
 """
 Simple calculator: how many carbon credits to buy to offset X tonnes of CO2e.
 
@@ -39,19 +39,26 @@ Usage:
 """
 
 import sys
+
 import math
 
 
+
 def credits_needed(emissions_tco2):
+
     # 1 carbon credit = 1 tCO2e (standard unit)
+    
     return math.ceil(emissions_tco2)
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python calc_credits.py <emissions in tCO2e>")
-        sys.exit(1)
 
+    if len(sys.argv) < 2:
+    
+        print("Usage: python calc_credits.py <emissions in tCO2e>")
+        
+        sys.exit(1)
+        
     emissions = float(sys.argv[1])
     print(f"Emissions: {emissions:.2f} tCO2e")
     print(f"Credits needed (1 credit = 1 tCO2e): {credits_needed(emissions)}")
