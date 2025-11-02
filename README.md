@@ -1,10 +1,9 @@
 # Carbon Credits — Mini Hackathon
 ## Intro 
--## What this repo contains
+## What this repo contains
 - Short explainers (beginner → technical)
 - Code: credit calculator, registry browser demo, visualisation notebook
-- Data: example emission inventories and sample credit metadata
-- Suggested project ideas and evaluation/QA checklist for credit quality
+
 
 ## 1) What is a carbon credit? (simple)
 A **carbon credit** is a tradable certificate that represents **one metric tonne of CO₂ equivalent (1 tCO₂e)** that has been reduced, avoided, or permanently removed from the atmosphere. Projects that create credits (for example, a forest protection project or a methane capture system) are verified by recognised standards and then issued credits which can be sold. When a credit is used to compensate for emissions it is **retired** so it cannot be sold again.
@@ -28,5 +27,66 @@ The voluntary carbon market has real value but also real problems: some credits 
 
 ---
 
+##Simple code using Python
+#!/usr/bin/env python3
+"""
+Simple calculator: how many carbon credits to buy to offset X tonnes CO2e.
+Usage: python calc_credits.py 8.8
+"""
+import sys
+import math
+
+def credits_needed(emissions_tco2):
+    # 1 carbon credit = 1 tCO2e (standard unit)
+    return math.ceil(emissions_tco2)
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python calc_credits.py <emissions in tCO2e>")
+        sys.exit(1)
+    emissions = float(sys.argv[1])
+    print(f"Emissions: {emissions:.2f} tCO2e")
+    print(f"Credits needed (1 credit = 1 tCO2e): {credits_needed(emissions)}")
+## Simple code in Rust
+// src/main.rs
+use std::env;
+use std::process;
+
+fn credits_needed(emissions_tco2: f64) -> u64 {
+    emissions_tco2.ceil() as u64
+}
+
+fn print_usage_and_exit(program: &str) -> ! {
+    eprintln!("Usage: {} <emissions in tCO2e>", program);
+    eprintln!("Example: {} 8.8", program);
+    process::exit(1);
+}
+
+fn main() {
+    let args: Vec<String> = env::args().collect();
+    let prog = &args[0];
+
+    if args.len() < 2 {
+        print_usage_and_exit(prog);
+    }
+
+    let input = &args[1];
+    let emissions: f64 = match input.parse() {
+        Ok(v) => v,
+        Err(_) => {
+            eprintln!("Error: could not parse '{}' as a number.", input);
+            print_usage_and_exit(prog);
+        }
+    };
+
+    if emissions < 0.0 {
+        eprintln!("Error: emissions cannot be negative.");
+        process::exit(1);
+    }
+
+    let credits = credits_needed(emissions);
+    println!("Emissions: {:.2} tCO₂e", emissions);
+    println!("Credits needed (1 credit = 1 tCO₂e): {}", credits);
+}
 
 
