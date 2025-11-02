@@ -1,6 +1,6 @@
 # Carbon Credits — Mini Hackathon
 
-#**Problem statement**
+**Problem statement**
 
 The current carbon credit system is centralised, opaque, and inefficient, making it 
 difficult for industries and governments to verify, trade, and track genuine carbon credits. 
