@@ -41,12 +41,12 @@ def credits_needed(emissions_tco2):
     return math.ceil(emissions_tco2)
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python calc_credits.py <emissions in tCO2e>")
+-    if len(sys.argv) < 2:
+-        print("Usage: python calc_credits.py <emissions in tCO2e>")
         sys.exit(1)
-    emissions = float(sys.argv[1])
-    print(f"Emissions: {emissions:.2f} tCO2e")
-    print(f"Credits needed (1 credit = 1 tCO2e): {credits_needed(emissions)}")
+-     missions = float(sys.argv[1])
+-    print(f"Emissions: {emissions:.2f} tCO2e")
+-    print(f"Credits needed (1 credit = 1 tCO2e): {credits_needed(emissions)}")
 ## Simple code in Rust
 // src/main.rs
 use std::env;
